@@ -63,7 +63,7 @@ function Navbar({login}) {
                     </div>
                     :
                     <div className="navbar-right">
-                        <button>Log in</button>
+                        <button className="login-button">Log in</button>
                     </div>
 
                 }

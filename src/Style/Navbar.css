@@ -58,3 +58,10 @@
     height: 22px;
     padding: 0 15px
 }
+
+.login-button{
+    border: none;
+    color: white;
+    background-color: red;
+    
+}
