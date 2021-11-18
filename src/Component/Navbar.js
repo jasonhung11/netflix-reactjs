@@ -1,13 +1,14 @@
-import React, {useState, useEffect} from 'react'
-import { Link, Route, Router } from 'react-router-dom'
+import React, {useState, useEffect, useContext} from 'react'
+import { Link} from 'react-router-dom'
 import data from "../fixtures/nav.json"
 import '../Style/Navbar.css'
 import netflix from '../Netflix_logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch, faBell} from '@fortawesome/free-solid-svg-icons'
+import {LoginContext} from '../LoginContext'
 
-
-function Navbar({login}) {
+function Navbar() {
+    const {login} = useContext(LoginContext);
     const [currentPage, setCurrentPage] = useState(data[0].name)
     const [navBlack, setNavBlack] = useState(false)
 
