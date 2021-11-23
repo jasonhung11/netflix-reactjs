@@ -1,6 +1,7 @@
 .navbar{
-    position: fixed;
+    position: absolute;
     top:0;
+    right: 0;
     width: 100%;
     z-index: 1;
 
@@ -60,8 +61,14 @@
 }
 
 .login-button{
+    padding: 10px 15px;
+    border-radius: 5px;
+
+}
+
+.red-btn{
     border: none;
     color: white;
-    background-color: red;
-    
+    background-color: rgb(238, 45, 45);
+    cursor: pointer;
 }

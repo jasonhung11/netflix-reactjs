@@ -2,7 +2,6 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import YouTube from 'react-youtube'
 import axios from '../axios'
-import requests from '../request'
 import '../Style/Row.css'
 import movieTrailer from 'movie-trailer'
 
@@ -25,7 +24,7 @@ function Row({title, fetchUrl, isFirstRow}) {
             setTrailerUrl('')
         }
         else{
-            movieTrailer(movie?.title || '')
+            movieTrailer((movie.title)? movie.title : '')
             .then((url) => {
                 const urlParams = new URLSearchParams(new URL(url).search)
                 console.log(urlParams.get('v'))
@@ -56,6 +55,7 @@ function Row({title, fetchUrl, isFirstRow}) {
                     <img 
                     onClick={() => handleMovieClick(movie)}
                     key={movie.id} 
+                    id = {movie.id}
                     src={`${baseURL}${isFirstRow? movie.poster_path:movie.backdrop_path}`} 
                     alt={movie.title} 
                     className={`poster-img ${isFirstRow&& 'row-poster-large'}`}></img>

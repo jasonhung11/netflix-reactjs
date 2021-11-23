@@ -1,15 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
 import Home from './Page/Home'
-import React, {useState, useEffect, useContext} from 'react';
+import React from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  Routes,
-  Link
+  Switch,
 } from "react-router-dom";
-import Login from './Page/Login'
-import { LoginContext, LoginProvider } from './LoginContext';
+import {LoginProvider } from './LoginContext';
+import Signup from './Page/Signup';
+
 
 
 
@@ -17,14 +16,18 @@ function App() {
 
   return (
     <LoginProvider> 
+
       <div className="app">
         <Router>
-          <Routes>
+          <Switch>
 
-            <Route exact path='/' element={<Home></Home>}/>
-            <Route path='/about' element={<h1>ABout page</h1>}/>
+            <Route exact path='/'>
+              <Home/>
+            </Route>
+
+
             
-          </Routes>
+          </Switch>
         </Router>
       </div>
 

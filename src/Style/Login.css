@@ -1,0 +1,59 @@
+.login-div {
+  background: url("https://assets.nflxext.com/ffe/siteui/vlv3/03fdc4bf-72f6-4926-83a7-a76e6a1a5591/5b8fd889-0dae-47af-8b5c-0555cbb9f611/HK-en-20211115-popsignuptwoweeks-perspective_alpha_website_large.jpg")
+    center no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 100%;
+}
+
+.login-gradient {
+  height: 100vh;
+  z-index: 1;
+  width: 100%;
+}
+
+.content-container {
+  padding-top: 200px;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.login-content {
+  color: white;
+  width: 100%;
+}
+
+.login-content h1 {
+  font-size: 50px;
+  padding-bottom: 1rem;
+}
+
+.login-content h2 {
+  font-size: 25px;
+  padding-bottom: 1.6rem;
+}
+
+.login-content p {
+  font-size: 20px;
+  padding-bottom: 1.6rem;
+}
+
+.signup-form {
+  display: inline-block;
+  width: 100%;
+}
+#email-input {
+  height: 30px;
+  width: 30%;
+  font-size: 14px;
+  outline-width: 0;
+  padding: 10px;
+  max-width: 600px;
+}
+
+.getstarted-btn {
+  font-size: 1rem;
+  padding: 16px 20px;
+}

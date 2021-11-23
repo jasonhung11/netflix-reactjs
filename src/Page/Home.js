@@ -6,7 +6,9 @@ import { LoginContext} from '../LoginContext';
 import Login from "./Login";
 
 function Home() {
-    const {login} = useContext(LoginContext);
+
+    const {login} = useContext(LoginContext);  
+    console.log(login);
     return (
         <div>
             {login? 

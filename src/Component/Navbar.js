@@ -24,12 +24,12 @@ function Navbar() {
             } else setNavBlack(false)
         })
         return () =>{
-            window.removeEventListener("scroll");
+            window.removeEventListener("scroll", null);
         }
     },[])
 
     return (
-        <nav className={`navbar ${navBlack && 'navbar-black'}`}>
+        <nav className={`navbar ${navBlack && login && 'navbar-black'}`}>
             <div className="navbar-margin">
                 <div className="navbar-left">
                     <div className="logo-div">
@@ -40,7 +40,6 @@ function Navbar() {
                     {login && 
                         <ul className="nav-ul">
                             {data.map((item) =>{
-                                console.log(item)
                                 return (
                                 <li id={item.id} className="nav-list">
                                     <Link 
@@ -64,7 +63,7 @@ function Navbar() {
                     </div>
                     :
                     <div className="navbar-right">
-                        <button className="login-button">Log in</button>
+                        <button className="login-button red-btn">Log in</button>
                     </div>
 
                 }
